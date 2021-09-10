@@ -16,14 +16,15 @@ body{
 
 .music-player{
     width: 350px;
-    height: 550px;
+    height: 600px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.08);
     box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
     padding: 30px;
+    padding-top: 50px;
     overflow: hidden;
     color: #d5eebb;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .song-name, .artist-name{
@@ -45,7 +46,7 @@ body{
     background-image: url('assets/images/cover 2.png');
     position: relative;
     display: block;
-    margin: 40px auto;
+    margin: 45px auto;
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -116,7 +117,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .play-btn{
