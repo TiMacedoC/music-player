@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img.menu-icon{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    opacity: .8;
+    cursor: pointer;
+    transition: .4s;
+}
+
+img.menu-icon:hover{
+    transform: scale(1.2);
+}
+
+img.menu-icon:active{
+    transform: scale(1);
+}
+
+img.close-btn{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    opacity: .8;
+    cursor: pointer;
+    transition: .4s;
+}
+
+img.close-btn:hover{
+    transform: scale(1.2);
+}
+
+img.close-btn:active{
+    transform: scale(1);
+}
+
+
+.navbar{
+    background-color: #3c3f3c9a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    transition: 1s;
+
+    transform: translateX(101%);
+}
+
+.navbar.open{
+    transform: translateX(0);
+}
+
+.song-list{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}

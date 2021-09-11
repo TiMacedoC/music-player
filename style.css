@@ -25,6 +25,8 @@ body{
     overflow: hidden;
     color: #d5eebb;
     margin-top: 40px;
+
+    position: relative;
 }
 
 .song-name, .artist-name{
