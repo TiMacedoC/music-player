@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Music Player</title>
 
     <!-- FONTS -->
@@ -20,10 +21,10 @@
 
     <div class="music-player">
 
-        <h1 class="song-name">Song 1</h1>
-        <p class="artist-name">Artist 1</p>
+        <h1 class="song-name"></h1>
+        <p class="artist-name"></p>
 
-        <div class="disk" id="disk"></div>
+        <div class="disk pause" id="disk"></div>
 
         <div class="song-slider">
             <input type="range" value="0" class="seek-bar">
@@ -35,7 +36,7 @@
             <button class="previous-song">
                 <img src="assets/images/pre.png" alt="previous song">
             </button>
-            <button class="play-btn">
+            <button class="play-btn pause" onclick="playPause()">
                 <span></span>
                 <span></span>
             </button>
