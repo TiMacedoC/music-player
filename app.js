@@ -65,9 +65,8 @@ setInterval(() => {
     seekBar.value = music.currentTime;
 }, 500);
 
-seekBar.addEventListener('change', () => {
+seekBar.addEventListener('input', () => {
     music.currentTime = seekBar.value;
-    console.log(seekBar.value);
 })
 
 // Next and previous song
