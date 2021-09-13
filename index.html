@@ -22,7 +22,7 @@
 
     <audio src="" id="audio"></audio>
 
-    <div class="music-player">
+    <div class="music-player" id="player">
 
         <h1 class="song-name"></h1>
         <p class="artist-name"></p>
@@ -49,22 +49,22 @@
         </div>
 
 
-        <!-- Side NavBar -->
-
+        <!-- Botão que abre a NavBar -->
         <img class="menu-icon" src="assets/images/menu-icon.svg" alt="menu">
 
-        <div class="navbar open">
-            <img class="close-btn" src="assets/images/close_white_icon.svg" alt="close">
+        <!-- Side NavBar -->
+        <div class="navbar open" id="navbar">
+            <img onclick="closeNavbar()" class="close-btn" src="assets/images/close_white_icon.svg" alt="close">
 
-            <div class="song-list">
-                <ul>
-                    <li>Song 1</li>
-                    <li>Song 2</li>
-                    <li>Song 3</li>
-                    <li>Song 4</li>
-                    <li>Song 4</li>
-                </ul>
-            </div>
+            <!-- <div> -->
+            <ul class="song-list">
+                <li>Song 1</li>
+                <li>Song 2</li>
+                <li>Song 3</li>
+                <li>Song 4</li>
+                <li>Song 4</li>
+            </ul>
+            <!-- </div> -->
         </div>
 
     </div>
