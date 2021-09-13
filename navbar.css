@@ -44,7 +44,7 @@ img.close-btn:active{
 
 
 .navbar{
-    background-color: #3c3f3c9a;
+    background-color: #3a3a3ad2;
     position: absolute;
     top: 0;
     right: 0;
@@ -60,8 +60,75 @@ img.close-btn:active{
 }
 
 .song-list{
+    margin-right: 11px;
+}
+
+.list-container{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
+    list-style: none;
+
+    height: 100%;
+    overflow: auto;
+}
+
+.song-list li{
+    color: #c5cabe;
+
+    max-width: 180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 5px 10px 5px;
+
+    
+    border-bottom: 1px solid #D5EEBB;
+    overflow: hidden;
+
+
+    transition: .3s;
+}
+
+.song-list li:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    filter: brightness(1.4);
+
+}
+
+
+.song-list h2{
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+
+.song-list img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+
+    margin-right: 5px;
+}
+
+
+/* Barra de rolagem  */
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #536455;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #759779;
+}
+::-webkit-scrollbar-track{
+    background: #9ba195;
+    border-radius: 0px;
 }
