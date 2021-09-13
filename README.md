@@ -1,4 +1,4 @@
-# Music Player (Em desenvolvimento)
+# Music Player
 
 - Projeto pessoal feito do zero para praticar.
 

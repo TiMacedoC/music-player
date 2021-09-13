@@ -1,6 +1,7 @@
 let currentMusic = 0;
 var isPlaying = false;
 
+
 const music = document.querySelector('#audio');
 
 const songName = document.querySelector('.song-name');
@@ -12,7 +13,7 @@ const songDuration = document.querySelector('.song-duration');
 const backwardBtn = document.querySelector('.previous-song');
 const playButton = document.querySelector('.play-btn');
 const forwardBtn = document.querySelector('.next-song');
-
+const playList = document.querySelector('.song-list');
 
 // Play button
 function playPause() {
@@ -20,10 +21,7 @@ function playPause() {
     diskImage.classList.toggle("pause");
 
     playingCheck() ? music.pause() : music.play();
-
-
 }
-
 
 function playingCheck() {
 
@@ -33,7 +31,6 @@ function playingCheck() {
     music.onpause = () => {
         isPlaying = false;
     }
-
     return isPlaying;
 }
 
@@ -50,6 +47,8 @@ function setMusic(musicIndex) {
     diskImage.style.backgroundImage = `url('${song.cover}')`
 
     currentTime.innerHTML = '00:00'
+
+    playingCheck() ? music.play() : music.pause();
 
     setTimeout(() => {
         seekBar.max = music.duration;
@@ -112,4 +111,27 @@ function formatTime(time) {
 }
 
 
+
+function selectFromList(i) {
+    setMusic(i);
+    music.play();
+
+    //Sempre mostrar a animação de musica tocando
+    playButton.classList.remove("pause");
+    diskImage.classList.remove("pause");
+
+    closeNavbar();
+}
+
+//Monta a PlayList
+for (i in songs) {
+    playList.insertAdjacentHTML(
+        'beforeend',
+        `
+         <li onclick="selectFromList(${i})">
+            <img class="song-cover" src="${songs[i].cover}" alt="Song Cover">
+            <h2 class="song-title">${songs[i].name}</h2>
+         </li>
+         `);
+}
 
